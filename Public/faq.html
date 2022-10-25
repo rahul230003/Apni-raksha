@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>FAQs</title>
+        <link rel="stylesheet" href="faq.css">
+        <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js'></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <body>
+            <h2>FAQs For Customers</h2>
+            <div class="accordion js-accordion">
+              
+                
+                <div class="accordion__item js-accordion-item active">
+                  <div class="accordion-header js-accordion-header">Why Apni Raksha?</div> 
+                <div class="accordion-body js-accordion-body">
+                  <div class="accordion-body__contents">
+                    It provides all the required information about covid at your fingertips and doesn’t ask you for your personal information to access the predictor.
+                  </div>
+          
+                </div><!-- end of accordion item -->
+                  <div class="accordion__item js-accordion-item">
+                  <div class="accordion-header js-accordion-header">What is the covid predictor?</div> 
+                <div class="accordion-body js-accordion-body">
+                  <div class="accordion-body__contents">
+                    The covid predictor asks you some basic questions about your current health status like your vaccination status, symptoms you are currently experiencing like cough, taste, smell, weakness etc and using these parameters it probability of you being infected by covid.
+                  </div>
+          
+                  </div><!-- end of accordion body -->
+                </div><!-- end of accordion item -->
+                <div class="accordion__item js-accordion-item">
+                    <div class="accordion-header js-accordion-header">What is the need of covid predictor?</div> 
+                  <div class="accordion-body js-accordion-body">
+                    <div class="accordion-body__contents">
+                      With a lot of cases currently present, people sometimes panic with a little symptoms and think that they might be infected by covid and go for a covid test, which is obviously more dangerous because a lot of already infected people are present there. The predictor just gives a percentage probabilty so that a person can estimate if there is really a need to consult a doctor and get himself tested.
+                    </div>
+          
+                    </div><!-- end of accordion body -->
+                  </div><!-- end of accordion item -->
+                   <div class="accordion__item js-accordion-item">
+                  <div class="accordion-header js-accordion-header">Do I need to give my personal information to use the predictor?</div> 
+                <div class="accordion-body js-accordion-body">
+                  <div class="accordion-body__contents">
+                    No, you don’t need to put any personal information, you just need to put basic details like vaccination status and answer some simple questions regarding covid symptoms that you are having.
+                  </div>
+            
+                  </div><!-- end of accordion body -->
+                </div><!-- end of accordion item -->
+                   <div class="accordion__item js-accordion-item">
+                  <div class="accordion-header js-accordion-header">Is the covid predictor completely accurate?</div> 
+                <div class="accordion-body js-accordion-body">
+                  <div class="accordion-body__contents">
+                    No, it can’t give 100% accurate results, it just gives an estimate of the probability of a person being infected by covid.
+                  </div>
+                  
+                  </div><!-- end of accordion body -->
+                </div><!-- end of accordion item -->
+                   <div class="accordion__item js-accordion-item">
+                  <div class="accordion-header js-accordion-header">Can this predictor replace doctors?</div> 
+                <div class="accordion-body js-accordion-body">
+                  <div class="accordion-body__contents">
+                    The main goal of our predictor is to provide an intermediary service for the user as he sees fit, this predictor does not aim to replace doctors, any medical facility or any medical institution. We are just a convenient intermediary that guide the individual towards a better and suited medical solution.
+                  </div>
+                 
+                  </div><!-- end of accordion body -->
+                </div><!-- end of accordion item -->
+              </div><!-- end of accordion -->
+             <script>
+                 var accordion = (function(){
+  
+  var $accordion = $('.js-accordion');
+  var $accordion_header = $accordion.find('.js-accordion-header');
+  var $accordion_item = $('.js-accordion-item');
+ 
+  // default settings 
+  var settings = {
+    // animation speed
+    speed: 400,
+    
+    // close all other accordion items if true
+    oneOpen: false
+  };
+    
+  return {
+    // pass configurable object literal
+    init: function($settings) {
+      $accordion_header.on('click', function() {
+        accordion.toggle($(this));
+      });
+      
+      $.extend(settings, $settings); 
+      
+      // ensure only one accordion is active if oneOpen is true
+      if(settings.oneOpen && $('.js-accordion-item.active').length > 1) {
+        $('.js-accordion-item.active:not(:first)').removeClass('active');
+      }
+      
+      // reveal the active accordion bodies
+      $('.js-accordion-item.active').find('> .js-accordion-body').show();
+    },
+    toggle: function($this) {
+            
+      if(settings.oneOpen && $this[0] != $this.closest('.js-accordion').find('> .js-accordion-item.active > .js-accordion-header')[0]) {
+        $this.closest('.js-accordion')
+               .find('> .js-accordion-item') 
+               .removeClass('active')
+               .find('.js-accordion-body')
+               .slideUp()
+      }
+      
+      // show/hide the clicked accordion item
+      $this.closest('.js-accordion-item').toggleClass('active');
+      $this.next().stop().slideToggle(settings.speed);
+    }
+  }
+})();
+
+$(document).ready(function(){
+  accordion.init({ speed: 300, oneOpen: true });
+});
+             </script>    
+        </body>
+        </html>
+
+    </body>
+</html>

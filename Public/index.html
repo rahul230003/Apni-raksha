@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Home Page</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Free Web tutorials">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="John Doe">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="grid.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link
+        rel="stylesheet"
+        href="https://unpkg.com/swiper/swiper-bundle.min.css"
+      />
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="row">
+                  <img class="logo" src="logo.png" alt="logo-img">
+                    <ul class="main-nav">
+                        <li><a href="#">Predictor</a></li>
+                        <li><a href="vaccine.html">Vaccination</a></li>
+                        <li><a href="faq.html">Faq</a></li>
+                    </ul>
+                </div>
+               
+            </nav>
+             <div class="hero-text-box">
+                <h1>Apni Raksha<br>Apni Suraksha</h1>
+                <a class="btn btn-full"  href="#">Explore Now</a>
+                <a class="btn btn-ghost" href="#">About Covid</a>
+             </div>
+        </header>
+        <section class="section-features">
+            <div class="row">
+                <h2>Get Reliable Information &mdash;On Your fingertips</h2>
+                <p class="long-copy">
+                   Apni Raksha a web portal that can give the required knowledge in order to make an individual aware about the know-how of this virus as
+                    it can be a very helpful in fighting this pandemic
+                </p>
+
+            </div>
+            <div class="row">
+                <div class="col span-1-of-3 box">
+                    <ion-icon class="icon-big" name="infinite-outline"></ion-icon>
+                    <h3>Get Your Immunity test done</h3>
+                    <p>Want to test your immunity against Covid-19? Our predictor gives the most accurate result go to the predictor give some answers to some general questions and you will be good to go</p>
+
+                </div>
+                <div class="col span-1-of-3 box">
+                    <ion-icon  class="icon-big" name="alarm-outline"></ion-icon>
+                    <h3>Latest Information</h3>
+                    <p> We update the information on a regular basis plus the information is displayed in a pictorial manner so that it is easy to understand, interpret and get insights from the information </p>
+
+                </div>
+                <div class="col span-1-of-3 box">
+                    <ion-icon class="icon-big" name="copy"></ion-icon>
+                    <h3>Feedback based mechanism</h3>
+                    <p>User's convenience is our top most priority we take feedback's very seriously and try to improve upon that so if you find something unusual you can give us your feedback and can improve the experience of other users</p>
+
+                </div>
+              
+            </div>
+
+        </section>
+
+    
+        <section class="about-covid">
+          <div class="row">
+            <h2>Origin Of Covid-19</h2>
+            <a href="https://youtu.be/w5HvxsOo00E"><img class="video" src="video.jpg" alt="video"></a>
+          </div>
+
+
+
+        </section>
+       
+      <h2></h2>
+      
+      
+         <h2>All you need to know about covid</h2>
+        <section>
+          <div class="row">
+              <div class="col span-1-of-2 box">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">SARS-CoV-2 is the strain of coronavirus that causes COVID-19. According to unofficial reports and taking into account the virus’s incubation period, Patient Zero was apparently infected in Wuhan, China in October or November of 2019. However, it was not until December 31, 2019 that the Wuhan Municipal Health Commission issued an alert that there was a cluster of cases of “viral pneumonia” in Wuhan. At the time, the initial source of the virus was said to have been an unidentified infected animal from the Wuhan wet market. This claim was later abandoned by China.</div>
+                      <div class="swiper-slide">Experts say SARS-CoV-2 originated in bats. That’s also how the coronaviruses behind Middle East respiratory syndrome (MERS) and severe acute respiratory syndrome (SARS) got started.</div>
+                      <div class="swiper-slide">As SARS-CoV-2 spread both inside and outside China, it infected people who have had no direct contact with animals. That meant the virus is transmitted from one human to another. It’s now spreading in the U.S. and around the globe, meaning that people are unwittingly catching and passing on the coronavirus. This growing worldwide transmission is what is now a pandemic.</div>
+                      <div class="swiper-slide">Scientists first identified a human coronavirus in 1965. It caused a common cold. Later that decade, researchers found a group of similar human and animal viruses and named them after their crown-like appearance. </div>
+                      <div class="swiper-slide">even coronaviruses can infect humans. The one that causes SARS emerged in southern China in 2002 and quickly spread to 28 other countries. More than 8,000 people were infected by July 2003, and 774 died. A small outbreak in 2004 involved only four more cases. This coronavirus causes fever, headache, and respiratory problems such as cough and shortness of breath.</div>
+                      <div class="swiper-slide">MERS started in Saudi Arabia in 2012. Almost all of the nearly 2,500 cases have been in people who live in or travel to the Middle East. This coronavirus is less contagious than its SARS cousin but more deadly, killing 858 people. It has the same respiratory symptoms but can also cause kidney failure.</div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+              </div>
+              <div class="col span-1-of-2 box">
+                    <img src="about.jpg" class="aware" alt="aware">
+              </div>
+            
+          
+              <!-- Swiper JS -->
+              <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+          
+              <!-- Initialize Swiper -->
+              <script>
+                var swiper = new Swiper(".mySwiper", {
+                  pagination: {
+                    el: ".swiper-pagination",
+                    type: "progressbar",
+                  },
+                  navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                  },
+                });
+              </script>
+          </div>
+
+
+
+        </section>
+<footer class="footer">
+    <div class="container">
+      <div class="row1">
+        <div class="footer-col">
+          <h4>Apni Raksha</h4>
+          <ul>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">our services</a></li>
+            <li><a href="#">Predictor</a></li>
+            <li><a href="#">Covid dashboard</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Get Help</h4>
+          <ul>
+            <li><a href="/faq.html">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Sections</h4>
+          <ul>
+            <li><a href="#">What is Apni Raksha</a></li>
+            <li><a href="#">Predictor</a></li>
+            <li><a href="/faq.html">FAQs</a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="#"><ion-icon class="fab" name="logo-instagram"></ion-icon></a>
+            <a href="#"><ion-icon class="fab" name="logo-twitter"></ion-icon></a>
+            <a href="#"><ion-icon class="fab" name="logo-linkedin"></ion-icon></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+        <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+     
+  </body>
+   
+    </html>
